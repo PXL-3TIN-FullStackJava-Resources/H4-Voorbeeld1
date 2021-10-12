@@ -6,15 +6,15 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  @Input() inputTest: string;
+  @Input() inputTest: string | undefined;
   @Output() klikKnop = new EventEmitter();
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  klik(){
+  klik(): void{
     this.klikKnop.emit(this.inputTest);
   }
 

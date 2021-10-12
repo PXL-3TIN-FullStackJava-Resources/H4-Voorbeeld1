@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  private quotes: string[];
+  quotes!: string[];
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.quotes = [];
     this.quotes.push("You can do anything, but not everything");
     this.quotes.push("Run you fools");
